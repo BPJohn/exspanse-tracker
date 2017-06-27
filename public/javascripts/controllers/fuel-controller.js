@@ -1,4 +1,4 @@
-app.controller('fuelController',['$scope',function($scope){
+var fuelController = function($scope){
   console.log("Inside fuel controller");
-  var $scope.message = "Welcom to the Home Page ";
-}])
+  $scope.message = "Welcome to the Home Page ";
+}

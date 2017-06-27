@@ -1,1 +1,1 @@
-var app = angular.module('exspenseApp', ['ngResource','$scope']);
+var app = angular.module('exspenseApp', ['ngResource']);
