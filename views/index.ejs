@@ -8,7 +8,16 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div ng-controller = "fuelController">
-      {{message}}
+      <h1><bold>{{message}}</bold></h1>
+      <form ng-submit = "calMilage()">
+      Begining Milage :{{prevOdomiter}}
+      <br/>
+      <input type = "number" ng-model = "currentOdomiter" placeholder="Current Odomiter"></br>
+      <input type ="number" ng-model = "qtyGallons" placeholder="Gallons"></br>
+      <input type ="number" ng-model = "fuelCost" placeholder="Fuel Total">
+      <br/>
+      <button type="submit">Submit</button>
+    </form>
 
 
     </div>

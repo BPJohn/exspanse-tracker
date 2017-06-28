@@ -1,4 +1,5 @@
 var fuelController = function($scope){
   console.log("Inside fuel controller");
-  $scope.message = "Welcome to the Home Page ";
+  $scope.message = "Milage Calulator ";
+  $scope.prevOdomiter = 25365 ;
 }
