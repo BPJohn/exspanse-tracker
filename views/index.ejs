@@ -9,16 +9,19 @@
     <p>Welcome to <%= title %></p>
     <div ng-controller = "fuelController">
       <h1><bold>{{message}}</bold></h1>
-      <form ng-submit = "calMilage()">
       Begining Milage :{{prevOdomiter}}
+
+      <form ng-submit = "calMilage()">
+
       <br/>
       <input type = "number" ng-model = "currentOdomiter" placeholder="Current Odomiter"></br>
-      <input type ="number" ng-model = "qtyGallons" placeholder="Gallons"></br>
-      <input type ="number" ng-model = "fuelCost" placeholder="Fuel Total">
+      <input type ="number"  step ="any" ng-model = "qtyGallons" placeholder="Gallons"></br>
+      <input type ="number"   step ="any" ng-model = "fuelCost" placeholder="Fuel Total">
       <br/>
       <button type="submit">Submit</button>
-    </form>
 
+    </form>
+{{currentOdomiter}}{{qtyGallons}}{{fuelCost|currency}}
 
     </div>
   </body>
