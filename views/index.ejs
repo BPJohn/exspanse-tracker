@@ -10,6 +10,11 @@
     <div ng-controller = "fuelController">
       <h1><bold>{{message}}</bold></h1>
       Previous Odomiter in Miles :{{startingOdomiter}}
+      <ul ng-repeat = "log in logFuel">
+        <li>{{log.odomiter}}</li>
+        <li>{{log.gallons}}</li>
+        <li>{{log.cost|currency}}</li>
+      </ul>
 
 
       <form ng-submit = "logFuel()">
