@@ -9,19 +9,19 @@
     <p>Welcome to <%= title %></p>
     <div ng-controller = "fuelController">
       <h1><bold>{{message}}</bold></h1>
-      Begining Milage :{{prevOdomiter}}
+      Previous Odomiter in Miles :{{startingOdomiter}}
 
-      <form ng-submit = "calMilage()">
 
-      <br/>
-      <input type = "number" ng-model = "currentOdomiter" placeholder="Current Odomiter"></br>
-      <input type ="number"  step ="3" ng-model = "qtyGallons" placeholder="Gallons"></br>
-      <input type ="number"   step ="3" ng-model = "fuelCost" placeholder="Fuel Total">
+      <form ng-submit = "logFuel()">
+
+      <input type = "number" step ="any" ng-model = "currentOdomiter" placeholder="Current Odomiter"></input></br>
+      <input type ="number"  step ="any" ng-model = "qtyGallons" placeholder="Gallons"></input></br>
+      <input type ="number"   step ="any" ng-model = "fuelCost" placeholder="Fuel Cost"></input>
       <br/>
       <button type="submit">Submit</button>
 
     </form>
-current Odomiter:{{currentOdomiter}}<br/>Quanity in Gallons:{{qtyGallons}}<br/>Fuel Cost:{{fuelCost|currency}}
+
 
     </div>
   </body>

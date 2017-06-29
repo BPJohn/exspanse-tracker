@@ -1,9 +1,22 @@
-var fuelController = function($scope){
+ function fuelController($scope){
+   $scope.message = "Welcome to the Fuel Log Page";
+   $scope.startingOdomiter = 56324;
   console.log("Inside fuel controller");
-  $scope.message = "Milage Calulator ";
-  $scope.prevOdomiter = 25365 ;
-  // $scope.milesdrove = $scope.prevOdomiter - $scope.currentOdomiter;
-  // console.log('Miles Drive '+ milesdrove);
+$scope.fuelLog = [
+  {odomiter:Number},
+  {gallons:Number},
+  {cost:Number}
+]
 
+
+$scope.logFuel = function(){
+ $scope.fuelLog.push({odomiter:$scope.currentOdomiter},
+   {gallons:$scope.qtyGallons},
+   {cost:$scope.fuelCost});
+ $scope.currentOdomiter = "";
+ $scope.qtyGallons = "";
+ $scope.fuelCost = "";
+
+}
 
 };
