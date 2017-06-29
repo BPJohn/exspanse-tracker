@@ -15,13 +15,13 @@
 
       <br/>
       <input type = "number" ng-model = "currentOdomiter" placeholder="Current Odomiter"></br>
-      <input type ="number"  step ="any" ng-model = "qtyGallons" placeholder="Gallons"></br>
-      <input type ="number"   step ="any" ng-model = "fuelCost" placeholder="Fuel Total">
+      <input type ="number"  step ="3" ng-model = "qtyGallons" placeholder="Gallons"></br>
+      <input type ="number"   step ="3" ng-model = "fuelCost" placeholder="Fuel Total">
       <br/>
       <button type="submit">Submit</button>
 
     </form>
-{{currentOdomiter}}{{qtyGallons}}{{fuelCost|currency}}
+current Odomiter:{{currentOdomiter}}<br/>Quanity in Gallons:{{qtyGallons}}<br/>Fuel Cost:{{fuelCost|currency}}
 
     </div>
   </body>
