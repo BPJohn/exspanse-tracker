@@ -10,10 +10,9 @@
     <div ng-controller = "fuelController">
       <h1><bold>{{message}}</bold></h1>
       Previous Odomiter in Miles :{{startingOdomiter}}
-      <ul ng-repeat = "log in logFuel">
-        <li>{{log.odomiter}}</li>
-        <li>{{log.gallons}}</li>
-        <li>{{log.cost|currency}}</li>
+      <ul ng-repeat = "log in fuelLog">
+        <li>odomiter:{{log.odomiter}},Gallons: {{log.gallons}},Cost:{{log.cost|currency}}</li>
+
       </ul>
 
 
