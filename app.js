@@ -26,7 +26,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.post('/api/fuellog',logController.create);
+app.post('/api/FuelLog',logController.create);
+app.get('/api/FuelLog',logController.list);
 
 app.use('/', index);
 app.use('/users', users);
