@@ -10,15 +10,15 @@
     <div ng-controller = "fuelController">
       <h1><bold>{{message}}</bold></h1>
       Previous Odomiter in Miles :{{startingOdomiter}}
-      <ul ng-repeat = "log in fuelLog">
-        {{log.created_date}}
+      <ul ng-repeat = "log in fuellogs">
+        {{log.created_date|date:'MM/dd/yy hh:mm:ss'}}
         <li>odomiter:{{log.odomiter}}</li><li>Gallons: {{log.gallons}}</li><li>Cost:{{log.cost|currency}}</li>
 
       </ul>
 
 
       <form ng-submit = "logFuel()">
-        <input type ="date"   ng-model = "logDate"></input><br/>
+        <input type ="datetime-local"  step = "any" ng-model = "logDate"></input><br/>
       <input type = "number" step ="any" ng-model = "currentOdomiter" placeholder="Current Odomiter"></input></br>
       <input type ="number"  step ="any" ng-model = "qtyGallons" placeholder="Gallons"></input></br>
       <input type ="number"   step ="any" ng-model = "fuelCost" placeholder="Fuel Cost"></input>
