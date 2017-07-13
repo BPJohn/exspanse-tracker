@@ -7,4 +7,4 @@ module.exports = mongoose.model('FuelLog',{
   cost:{type:Number,required:true,minlength:3}
 
 
-})
+});

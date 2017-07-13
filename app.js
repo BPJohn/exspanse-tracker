@@ -5,8 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var logController = require('./public/javascripts/controllers/log-controllers')
-// var fuelController = require('./public/javascripts/controllers/fuel-controller.js');
+var logController = require('./public/javascripts/controllers/log-controllers');
+var fuelController = require('./public/javascripts/controllers/log-controllers.js');
+var mpgController = require('./public/javascripts/controllers/mpg-controller.js')
 mongoose.connect('mongodb://127.0.0.1:27017/logFuel/fuellog');
 
 var index = require('./routes/index');
@@ -28,6 +29,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.post('/api/FuelLog',logController.create);
 app.get('/api/FuelLog',logController.list);
+app.post('/api/MpgLog',mpgController.create);
+app.get('/api/MpgLog',mpgController.list);
 
 app.use('/', index);
 app.use('/users', users);
