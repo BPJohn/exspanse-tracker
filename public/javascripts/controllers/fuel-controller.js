@@ -1,26 +1,26 @@
 app.controller('fuelController', ['$scope', '$resource', function($scope, $resource) {
-  var FuelLog = $resource('/api/FuelLog');
+  var FuelLog = $resource('/api/fuellog');
   $scope.message = "Welcome to the Fuel Log Page";
   $scope.startingOdomiter = 56324;
   // console.log("Inside fuel controller");
 
   FuelLog.query(function(results) {
-    $scope.fulelogs = results;
+    $scope.fulelog = results;
   })
-  $scope.fuellogs = []
+  $scope.fuellog = []
 
 
   $scope.logFuel = function() {
 
 
-    var fuellogs = new FuelLog();
-    fuellogs.created_date = $scope.logDate;
-    fuellogs.odomiter = $scope.currentOdomiter;
-    fuellogs.gallons = $scope.qtyGallons;
-    fuellogs.cost = $scope.fuelCost;
+    var fuellog = new FuelLog();
+    fuellog.created_date = $scope.logDate;
+    fuellog.odomiter = $scope.currentOdomiter;
+    fuellog.gallons = $scope.qtyGallons;
+    fuellog.cost = $scope.fuelCost;
 
-    fuellogs.$save(function(result) {
-      $scope.fuellogs.push(result);
+    fuellog.$save(function(result) {
+      $scope.fuellog.push(result);
       //  {odomiter:$scope.currentOdomiter,
       //  gallons:$scope.qtyGallons,
       //  cost:$scope.fuelCost}

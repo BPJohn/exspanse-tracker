@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var logController = require('./public/javascripts/controllers/log-controllers');
 var fuelController = require('./public/javascripts/controllers/log-controllers.js');
 var mpgController = require('./public/javascripts/controllers/mpg-controller.js')
-mongoose.connect('mongodb://127.0.0.1:27017/logFuel/fuellog');
+mongoose.connect('mongodb://127.0.0.1:27017/FuelLog/');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
