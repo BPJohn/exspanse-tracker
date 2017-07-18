@@ -1,11 +1,11 @@
 app.controller('carController',['$scope','$resource',function($scope ,$resource){
-  var Carlog = $resource('/api/Carlog');
+  var Carlog = $resource('/api/CarLog');
   $scope.message = "Car Setup Page";
 
-  CarLog.query(function(results){
-    $scope.carlog = results;
-  });
-  $scope.carlog =[]
+  // CarLog.query(function(results){
+  //   $scope.carlog = results;
+  // })
+  $scope.Carlog =[]
 
   var carlog = new CarLog();
   carlog.make = $scope.carMake;

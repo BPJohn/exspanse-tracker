@@ -8,7 +8,7 @@ module.exports.create = function(req,res){
   console.log(req.body);
 }
 module.exports.list = function (req , res){
-  fuellogs.find({}, function(err,results){
+  FuelLog.find({}, function(err,results){
     res.json(results);
   });
 }

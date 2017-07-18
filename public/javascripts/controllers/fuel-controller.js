@@ -5,7 +5,7 @@ app.controller('fuelController', ['$scope', '$resource', function($scope, $resou
   // console.log("Inside fuel controller");
 
   FuelLog.query(function(results) {
-    $scope.fulelogs = results;
+    $scope.fuellogs = results;
   })
   $scope.fuellogs = []
 
