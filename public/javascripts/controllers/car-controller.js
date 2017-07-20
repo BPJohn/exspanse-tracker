@@ -1,7 +1,7 @@
 var CarLog = require('../models/car-model');
 
 module.exports.create = function(req , res){
-  var carlog = new CarLog(req.body);
+  var carlogs = new CarLog(req.body);
   carlog.save(function(err , result){
     res.json(result);
 

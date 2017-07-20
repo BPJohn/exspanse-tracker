@@ -5,7 +5,7 @@ app.controller('carController',['$scope','$resource',function($scope ,$resource)
   // CarLog.query(function(results){
   //   $scope.carlog = results;
   // })
-  $scope.carlog =[]
+  $scope.carlogs =[]
 
   $scope.createCar = function(){
 
